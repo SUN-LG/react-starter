@@ -3,6 +3,8 @@ import CounterRoute from './Counter'
 import Home from './Home'
 import ElapseRoute from './Elapse'
 import ZenRoute from './Zen'
+import PageNotFound from './PageNotFound'
+import Redirect from './PageNotFound/redirect'
 
 const createRoutes = store => ({
   path: '/',
@@ -11,7 +13,9 @@ const createRoutes = store => ({
   childRoutes: [
     CounterRoute(store),
     ElapseRoute(store),
-    ZenRoute(store)
+    ZenRoute(store),
+    PageNotFound,
+    Redirect
   ]
 })
 
