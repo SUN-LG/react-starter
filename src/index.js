@@ -6,6 +6,7 @@ import createRoutes from './routes'
 import createStore from './store/createStore'
 
 const store = createStore()
+console.log(store)
 ReactDOM.render(
   <Provider store={store}>
     <Router history={browserHistory} routes={createRoutes(store)}></Router>
